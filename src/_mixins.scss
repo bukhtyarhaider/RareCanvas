@@ -1,0 +1,19 @@
+@mixin flex($direction: row, $justify: "", $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  @if $justify != "" {
+    justify-content: $justify;
+  }
+  align-items: $align;
+}
+
+@mixin fadeAnimation {
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
