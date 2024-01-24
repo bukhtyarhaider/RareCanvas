@@ -72,6 +72,7 @@ export { default as monkey6 } from "./images/monkey/6.png";
 
 export { default as newletter } from "./images/newletter.png";
 export { default as rocketLaunch } from "./icons/rocket-launch.svg";
+export { default as heroSectionGradient } from "./images/hero-section-gradient.png";
 
 // 404 page images
 export { default as figmaIcon } from "./icons/404/figma-icon.svg";
