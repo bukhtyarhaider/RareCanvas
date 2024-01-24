@@ -71,6 +71,7 @@ export { default as monkey5 } from "./images/monkey/5.png";
 export { default as monkey6 } from "./images/monkey/6.png";
 
 export { default as newletter } from "./images/newletter.png";
+export { default as rocketLaunch } from "./icons/rocket-launch.svg";
 
 // 404 page images
 export { default as figmaIcon } from "./icons/404/figma-icon.svg";
