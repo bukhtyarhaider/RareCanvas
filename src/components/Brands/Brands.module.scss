@@ -1,0 +1,34 @@
+@import "../../mixins";
+.brandsContainer {
+  margin: 90px;
+  margin-right: 50px;
+  @include flex(row, space-between, center);
+  gap: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: slide 2s linear infinite alternate;
+
+  @keyframes slide {
+    to {
+      transform: translateX(-5%);
+    }
+  }
+}
+
+.brandsContainer:hover {
+  animation-play-state: paused;
+}
+
+@media screen and (max-width: 750px) {
+  .brandsContainer {
+    margin: 20px;
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    animation-play-state: paused;
+
+    img {
+      height: 20%;
+      width: 20%;
+    }
+  }
+}
