@@ -1,0 +1,177 @@
+@import "../../mixins";
+.heroSectionContainer {
+  padding: 0 90px;
+  position: relative;
+  .topContentWrapper {
+    position: relative;
+    z-index: 1;
+    @include flex(row, space-between, center);
+    margin-top: 50px;
+    .contentWrapper {
+      width: 40%;
+
+      .headingWrapper {
+        .heading {
+          font-size: 74px;
+          font-weight: 800;
+          line-height: 72px;
+          letter-spacing: -2px;
+
+          span {
+            background: linear-gradient(112.62deg, #8d1cfe, #0038ed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+
+      .description {
+        font-family: var(--secondaryFont);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        padding: 20px 0;
+      }
+
+      .detailsWrapper {
+        @include flex(row, start, center);
+        gap: 40px;
+        .details {
+          @include flex(row, start, center);
+          gap: 20px;
+
+          .detail {
+            p {
+              font-size: 14px;
+              font-weight: 400;
+              padding-bottom: 3px;
+              letter-spacing: -0.003em;
+            }
+
+            h6 {
+              font-size: 24px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+
+    .imageWrapper {
+      .image {
+        position: relative;
+        width: 445px;
+        height: 463px;
+        min-width: 445px;
+        max-width: 100%;
+
+        .image1Icon,
+        .image2Icon,
+        .image3Icon {
+          position: absolute;
+          height: 80%;
+          width: 73%;
+          border-radius: 24px;
+          max-width: 100%;
+          overflow: hidden;
+          max-height: 100%;
+          object-fit: cover;
+        }
+
+        .image1Icon {
+          top: 10%;
+          right: 12.79%;
+          z-index: 2;
+        }
+
+        .image2Icon {
+          top: 0;
+          left: 0;
+        }
+
+        .image3Icon {
+          bottom: 0;
+          right: 0;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .gradientBG {
+    position: absolute;
+    top: -105px;
+    left: 0;
+    height: 800px;
+    width: 800px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .star {
+    position: absolute;
+    top: 35%;
+    right: 50%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .heroSectionContainer {
+    padding: 0 20px;
+    padding-bottom: 40px;
+    .topContentWrapper {
+      @include flex(column, space-between, center);
+      margin-top: 20px;
+      .contentWrapper {
+        width: 100%;
+
+        .headingWrapper {
+          .heading {
+            font-size: 44px;
+            line-height: 52px;
+          }
+        }
+
+        .description {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 30px;
+          padding: 20px 0;
+        }
+
+        .detailsWrapper {
+          @include flex(column, start, start);
+          gap: 40px;
+          .details {
+            width: 100%;
+            gap: 40px;
+            padding-bottom: 50px;
+          }
+        }
+      }
+
+      .imageWrapper {
+        .image {
+          position: relative;
+          width: 100%;
+          height: 363px;
+          min-width: 345px;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .gradientBG {
+      height: 450px;
+      width: 400px;
+    }
+
+    .star {
+      top: 33%;
+      right: 10%;
+    }
+  }
+}

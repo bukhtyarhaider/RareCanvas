@@ -3,6 +3,8 @@
   @include flex(row, space-between, center);
   padding: 0 90px;
   background-color: transparent;
+  position: relative;
+  z-index: 1;
 
   .logoWrapper {
     cursor: pointer;

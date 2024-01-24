@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
 import "./main.scss";
 import TopBar from "./components/TopBar/TopBar";
+import HeroSection from "./components/HeroSection/HeroSection";
 
 interface ThemeContextProps {
   theme: string;
@@ -19,6 +20,7 @@ function App() {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="app-container" id={theme}>
         <TopBar />
+        <HeroSection />
       </div>
     </ThemeContext.Provider>
   );
