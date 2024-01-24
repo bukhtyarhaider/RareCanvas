@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import "./main.scss";
+import TopBar from "./components/TopBar/TopBar";
 
 interface ThemeContextProps {
   theme: string;
@@ -17,7 +18,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="app-container" id={theme}>
-        Home
+        <TopBar />
       </div>
     </ThemeContext.Provider>
   );
