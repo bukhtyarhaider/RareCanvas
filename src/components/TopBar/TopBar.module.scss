@@ -1,0 +1,40 @@
+@import "../../mixins";
+.topBarContainer {
+  @include flex(row, space-between, center);
+  padding: 0 90px;
+  background-color: transparent;
+
+  .logoWrapper {
+    cursor: pointer;
+    .wrap {
+      height: auto;
+      width: 150px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .menuWrapper {
+    @include flex(row, center, center);
+    gap: 20px;
+
+    p {
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .topBarContainer {
+    padding: 0 20px;
+    padding-left: 15px;
+    .menuWrapper {
+      display: none !important;
+    }
+  }
+}
