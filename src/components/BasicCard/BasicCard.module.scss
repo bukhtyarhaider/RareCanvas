@@ -39,3 +39,9 @@
       0px 8px 4px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09);
   }
 }
+
+@media screen and (max-width: 750px) {
+  .basicCardContainer {
+    width: 100%;
+  }
+}
