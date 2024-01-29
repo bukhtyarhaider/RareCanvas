@@ -1,0 +1,80 @@
+@import "../../mixins";
+.NFTCardContainer {
+  background-color: var(--color-midnightblue);
+  width: fit-content;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  overflow: hidden;
+  .imageWrapp {
+    height: 250px;
+    width: 315px;
+    img {
+      transition: 0.5s ease-in-out;
+      height: 100%;
+      width: 100%;
+      transform: scale(1);
+    }
+  }
+
+  .nftInfo {
+    padding: 20px 30px;
+    .artstInfo {
+      .artistType {
+        padding-bottom: 5px;
+        font-size: 14px;
+        font-weight: 300;
+      }
+
+      .artistAvatarName {
+        @include flex(row, start, center);
+        padding-bottom: 20px;
+        .avatar {
+          height: 22px;
+          width: 22px;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .artistName {
+          padding-left: 10px;
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .additionalInfo {
+    @include flex(row, space-between, center);
+
+    .leftSide,
+    .rightSide {
+      .title {
+        padding-bottom: 10px;
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--color-gray-100);
+      }
+
+      .value {
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+    .imageWrapp {
+      img {
+        height: 100%;
+        width: 100%;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
