@@ -1,0 +1,31 @@
+@import "../../mixins";
+.createNFTContainer {
+  padding: 20px 90px;
+
+  .heading {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: -0.02em;
+    padding-bottom: 20px;
+  }
+  .cardsWrapp {
+    @include flex(row, center, start);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .createNFTContainer {
+    padding: 20px;
+
+    .heading {
+      font-size: 30px;
+    }
+    .cardsWrapp {
+      @include flex(column, center, start);
+      gap: 20px;
+      padding: 0 20px;
+    }
+  }
+}

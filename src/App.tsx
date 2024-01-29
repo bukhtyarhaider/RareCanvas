@@ -4,6 +4,7 @@ import TopBar from "./components/TopBar/TopBar";
 import HeroSection from "./components/HeroSection/HeroSection";
 import Brands from "./components/Brands/Brands";
 import FancyDrop from "./components/FancyDrop/FancyDrop";
+import CreateNFT from "./components/CreateNFT/CreateNFT";
 
 interface ThemeContextProps {
   theme: string;
@@ -25,6 +26,7 @@ function App() {
         <HeroSection />
         <Brands />
         <FancyDrop />
+        <CreateNFT />
       </div>
     </ThemeContext.Provider>
   );

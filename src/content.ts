@@ -11,12 +11,14 @@ import {
   art4,
   art5,
   art6,
+  buy,
   car1,
   car2,
   car3,
   car4,
   car5,
   car6,
+  category,
   illustrations1,
   illustrations2,
   illustrations3,
@@ -29,6 +31,7 @@ import {
   monkey4,
   monkey5,
   monkey6,
+  wallet,
 } from "./assets";
 
 export const nftCategories = [
@@ -300,5 +303,26 @@ export const nftsData = [
     artistName: "MoonDancer",
     price: "1.63 ETH",
     heighestBid: "0.33 wETH",
+  },
+];
+
+export const createNFTData = [
+  {
+    image: wallet,
+    title: "Connect Wallet",
+    description:
+      "This growth plan will help you reach your resolutions and achieve the goals you have been striving towards.",
+  },
+  {
+    image: buy,
+    title: "NFT Marketplace",
+    description:
+      "This growth plan will help you reach your resolutions and achieve the goals you have been striving towards.",
+  },
+  {
+    image: category,
+    title: "Collect NFT",
+    description:
+      "This growth plan will help you reach your resolutions and achieve the goals you have been striving towards.",
   },
 ];
