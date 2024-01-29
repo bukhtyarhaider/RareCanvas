@@ -5,12 +5,12 @@ export interface ChipProps {
   /**
    * The unique identifier for the chip.
    */
-  id: number; // Replace 'number' with the appropriate type for your id
+  id: string;
 
   /**
    * The label content for the chip.
    */
-  label: string; // Replace 'string' with the appropriate type for your label
+  label: string;
 
   /**
    * Flag to determine if the chip is active.
