@@ -5,11 +5,15 @@
 
   .chip,
   .activeChip {
-    padding: 10px 20px;
+    padding: 12px 32px;
     border-radius: 66px;
     background-color: var(--primary-presed);
     cursor: pointer;
     transition: 0.25s ease-in-out;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
   }
   .chip:hover {
     background-color: var(--color-dimgray);

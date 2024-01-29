@@ -3,6 +3,7 @@ import "./main.scss";
 import TopBar from "./components/TopBar/TopBar";
 import HeroSection from "./components/HeroSection/HeroSection";
 import Brands from "./components/Brands/Brands";
+import FancyDrop from "./components/FancyDrop/FancyDrop";
 
 interface ThemeContextProps {
   theme: string;
@@ -23,6 +24,7 @@ function App() {
         <TopBar />
         <HeroSection />
         <Brands />
+        <FancyDrop />
       </div>
     </ThemeContext.Provider>
   );
