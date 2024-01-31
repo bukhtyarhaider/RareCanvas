@@ -6,6 +6,7 @@ import Brands from "./components/Brands/Brands";
 import FancyDrop from "./components/FancyDrop/FancyDrop";
 import CreateNFT from "./components/CreateNFT/CreateNFT";
 import Creators from "./components/Creators/Creators";
+import JoinUs from "./components/JoinUs/JoinUs";
 
 interface ThemeContextProps {
   theme: string;
@@ -29,6 +30,7 @@ function App() {
         <FancyDrop />
         <CreateNFT />
         <Creators />
+        <JoinUs />
       </div>
     </ThemeContext.Provider>
   );

@@ -1,0 +1,103 @@
+@import "../../mixins";
+.joinUsContainer {
+  margin: 50px auto;
+  max-width: 870px;
+  width: 100%;
+  padding: 50px;
+  @include flex(row, space-between, center);
+  background-color: var(--color-midnightblue);
+  border-radius: 14px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.25s ease-in-out;
+
+  .imageContainer {
+    width: 55%;
+    .imageWrapp {
+      height: 250px;
+      width: 350px;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .contentContainer {
+    width: 47%;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 50px;
+      padding-right: 90px;
+    }
+
+    p {
+      font-size: 19px;
+      font-weight: 300;
+      line-height: 32px;
+      padding: 10px 0;
+      padding-bottom: 30px;
+    }
+
+    .subscribeWrapper {
+      @include flex(row, center, center);
+      width: fit-content;
+      border-radius: 30px;
+      background-color: var(--primary-text);
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .joinUsContainer {
+    @include flex(column, space-between, center);
+    margin: 50px auto;
+    padding: 30px;
+    width: 90%;
+    .imageContainer {
+      width: 100%;
+      .imageWrapp {
+        height: 100%;
+        width: 100%;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    .contentContainer {
+      width: 100%;
+
+      h2 {
+        font-size: 26px;
+        line-height: 30px;
+        padding-top: 20px;
+        padding-right: 0px;
+      }
+
+      p {
+        font-size: 19px;
+        font-weight: 300;
+        line-height: 30px;
+        padding: 10px 0;
+        padding-bottom: 30px;
+      }
+
+      .subscribeWrapper {
+        @include flex(row, space-between, center);
+        border: 1px solid var(--primary-text);
+        border-radius: 30px;
+        background-color: var(--primary-text);
+
+        input {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
