@@ -44,6 +44,7 @@
 
     .subscribeWrapper {
       @include flex(row, center, center);
+      border: 1px solid var(--primary-text);
       width: fit-content;
       border-radius: 30px;
       background-color: var(--primary-text);
@@ -90,7 +91,6 @@
 
       .subscribeWrapper {
         @include flex(row, space-between, center);
-        border: 1px solid var(--primary-text);
         border-radius: 30px;
         background-color: var(--primary-text);
 
