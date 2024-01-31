@@ -1,0 +1,39 @@
+@import "../../mixins";
+.creatorsContainer {
+  padding: 40px 90px;
+  h2 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 52px;
+    padding-bottom: 5px;
+  }
+
+  p {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 40px;
+    padding-bottom: 40px;
+  }
+
+  .artistsCardsContainer {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .creatorsContainer {
+    padding: 20px;
+
+    p {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    .artistsCardsContainer {
+      gap: 20px;
+      padding-inline: 20px;
+    }
+  }
+}
