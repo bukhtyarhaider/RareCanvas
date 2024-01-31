@@ -11,6 +11,18 @@ import {
   art4,
   art5,
   art6,
+  artist1,
+  artist10,
+  artist11,
+  artist12,
+  artist2,
+  artist3,
+  artist4,
+  artist5,
+  artist6,
+  artist7,
+  artist8,
+  artist9,
   buy,
   car1,
   car2,
@@ -324,5 +336,68 @@ export const createNFTData = [
     title: "Collect NFT",
     description:
       "This growth plan will help you reach your resolutions and achieve the goals you have been striving towards.",
+  },
+];
+
+export const artistsData = [
+  {
+    image: artist1,
+    name: "Keepitreal",
+    sales: 34.53,
+  },
+  {
+    image: artist2,
+    name: "DigiLab",
+    sales: 34.53,
+  },
+  {
+    image: artist3,
+    name: "GravityOne",
+    sales: 34.53,
+  },
+  {
+    image: artist4,
+    name: "Juanie",
+    sales: 34.53,
+  },
+  {
+    image: artist5,
+    name: "BlueWhale",
+    sales: 34.53,
+  },
+  {
+    image: artist6,
+    name: "Mr Fox",
+    sales: 34.53,
+  },
+  {
+    image: artist7,
+    name: "Shroomie",
+    sales: 34.53,
+  },
+  {
+    image: artist8,
+    name: "Robotica",
+    sales: 34.53,
+  },
+  {
+    image: artist9,
+    name: "RustyRobot",
+    sales: 34.53,
+  },
+  {
+    image: artist10,
+    name: "Animakid",
+    sales: 34.53,
+  },
+  {
+    image: artist11,
+    name: "Dotgu",
+    sales: 34.53,
+  },
+  {
+    image: artist12,
+    name: "Ghiblier",
+    sales: 34.53,
   },
 ];

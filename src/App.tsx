@@ -5,6 +5,7 @@ import HeroSection from "./components/HeroSection/HeroSection";
 import Brands from "./components/Brands/Brands";
 import FancyDrop from "./components/FancyDrop/FancyDrop";
 import CreateNFT from "./components/CreateNFT/CreateNFT";
+import Creators from "./components/Creators/Creators";
 
 interface ThemeContextProps {
   theme: string;
@@ -27,6 +28,7 @@ function App() {
         <Brands />
         <FancyDrop />
         <CreateNFT />
+        <Creators />
       </div>
     </ThemeContext.Provider>
   );
