@@ -48,6 +48,10 @@ import {
 
 export const nftCategories = [
   {
+    id: "all",
+    label: "All",
+  },
+  {
     id: "1",
     label: "Artificial intelligent",
   },

@@ -1,11 +1,11 @@
 @import "../../mixins";
 .custom-button {
   @include flex(row, center, center);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--primary-text);
   background-color: var(--color-blueviolet-200);
-  padding: 11px 30px;
+  padding: 14px 30px;
   border-radius: 30px;
   transition: 0.3s ease-in-out;
 

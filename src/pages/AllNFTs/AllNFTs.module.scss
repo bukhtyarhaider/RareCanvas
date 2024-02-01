@@ -1,0 +1,85 @@
+@import "../../mixins";
+.allNFTsContainer {
+  padding: 0 90px;
+  position: relative;
+  z-index: 2;
+  .heading {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    font-size: 74px;
+    font-weight: 800;
+    line-height: 72px;
+    letter-spacing: -2px;
+    text-align: center;
+
+    span {
+      background: linear-gradient(112.62deg, #8d1cfe, #0038ed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .searchWrapper {
+    @include flex(row, space-between, center);
+    border: 1px solid var(--primary-text);
+    width: 65%;
+    margin-inline: auto;
+    border-radius: 30px;
+    background-color: var(--primary-text);
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .chipContainer {
+    @include flex(row, start, start);
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    padding-top: 70px;
+  }
+
+  .nftCardsContainer {
+    @include flex(row, center, start);
+    padding-top: 30px;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-bottom: 70px;
+  }
+
+  .gradientBG {
+    position: absolute;
+    z-index: -1;
+    top: -105px;
+    left: 0;
+    height: 800px;
+    width: 800px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .allNFTsContainer {
+    padding: 0 20px;
+    padding-bottom: 40px;
+
+    .heading {
+      font-size: 38px;
+      line-height: 52px;
+    }
+
+    .searchWrapper {
+      width: 100%;
+    }
+
+    .gradientBG {
+      height: 450px;
+      width: 400px;
+    }
+  }
+}
