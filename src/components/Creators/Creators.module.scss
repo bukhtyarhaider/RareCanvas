@@ -1,6 +1,8 @@
 @import "../../mixins";
 .creatorsContainer {
   padding: 40px 90px;
+  position: relative;
+  z-index: 1;
   h2 {
     font-size: 38px;
     font-weight: 700;

@@ -94,3 +94,7 @@ export { default as facebook } from "./icons/social-icons/facebook.svg";
 export { default as github } from "./icons/social-icons/github.svg";
 export { default as linkedin } from "./icons/social-icons/linked-in.svg";
 export { default as telegram } from "./icons/social-icons/slack.svg";
+
+// background gradients
+export { default as gradientPurpleBG } from "./images/gradientPurpleBG.png";
+export { default as gradientBlueBG } from "./images/gradientBlueBG.png";

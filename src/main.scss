@@ -114,6 +114,26 @@ body {
   color: var(--primary-text);
   background-color: var(--primary-main);
   position: relative;
+
+  .gradientPurpleBG {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .gradientBlueBG {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
 
 .ant-drawer-wrapper-body {

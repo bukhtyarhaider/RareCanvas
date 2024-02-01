@@ -1,6 +1,8 @@
 @import "../../mixins";
 .fancyDropContainer {
   padding: 20px 90px;
+  position: relative;
+  z-index: 1;
   .heading {
     font-size: 38px;
     font-weight: 700;

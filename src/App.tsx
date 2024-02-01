@@ -8,6 +8,8 @@ import CreateNFT from "./components/CreateNFT/CreateNFT";
 import Creators from "./components/Creators/Creators";
 import JoinUs from "./components/JoinUs/JoinUs";
 import Footer from "./components/Footer/Footer";
+import { gradientBlueBG, gradientPurpleBG } from "./assets";
+import LazyLoad from "react-lazy-load";
 
 interface ThemeContextProps {
   theme: string;
@@ -33,6 +35,14 @@ function App() {
         <Creators />
         <JoinUs />
         <Footer />
+
+        <LazyLoad className="gradientPurpleBG">
+          <img src={gradientPurpleBG} alt="gradientPurpleBG" />
+        </LazyLoad>
+
+        <LazyLoad className="gradientBlueBG">
+          <img src={gradientBlueBG} alt="gradientBlueBG" />
+        </LazyLoad>
       </div>
     </ThemeContext.Provider>
   );
