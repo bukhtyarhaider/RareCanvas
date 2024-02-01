@@ -7,7 +7,7 @@ import CustomButton from "../CustomButton/CustomButton";
 
 const FancyDrop = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>(
-    nftCategories[0].id
+    nftCategories[1].id
   );
   const filteredNfts = useMemo(
     () => nftsData.filter((item) => item.categoryId === selectedCategory),
@@ -22,7 +22,7 @@ const FancyDrop = () => {
       <h1 className={styles.heading}>Fancy Drop</h1>
 
       <div className={styles.chipContainer}>
-        {nftCategories.map((category) => (
+        {nftCategories.slice(1).map((category) => (
           <Chip
             isActive={category.id === selectedCategory}
             id={category.id}

@@ -3,6 +3,8 @@
   @include flex(row, start, start);
   padding: 20px 90px;
   padding-top: 70px;
+  position: relative;
+  z-index: 1;
   .logoContainer {
     width: 30%;
 
