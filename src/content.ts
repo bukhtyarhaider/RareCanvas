@@ -401,3 +401,74 @@ export const artistsData = [
     sales: 34.53,
   },
 ];
+
+export const footerData = [
+  {
+    heading: "Marketplace",
+    links: [
+      {
+        name: "Buy Product",
+        path: "/",
+      },
+      {
+        name: "Sell Product",
+        path: "/",
+      },
+      {
+        name: "Our Creator",
+        path: "/",
+      },
+    ],
+  },
+  {
+    heading: "Resources",
+    links: [
+      {
+        name: "About Us",
+        path: "/",
+      },
+      {
+        name: "Event",
+        path: "/",
+      },
+      {
+        name: "Tutorial",
+        path: "/",
+      },
+    ],
+  },
+  {
+    heading: "Company",
+    links: [
+      {
+        name: "Media",
+        path: "/",
+      },
+      {
+        name: "Blog",
+        path: "/",
+      },
+      {
+        name: "Pricing",
+        path: "/",
+      },
+    ],
+  },
+  {
+    heading: "Legal",
+    links: [
+      {
+        name: "Terms",
+        path: "/",
+      },
+      {
+        name: "Privacy",
+        path: "/",
+      },
+      {
+        name: "Support",
+        path: "/",
+      },
+    ],
+  },
+];
