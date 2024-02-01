@@ -86,3 +86,11 @@ export { default as cross3 } from "./icons/404/cross3.svg";
 export { default as ellipse1 } from "./icons/404/ellipse1.svg";
 export { default as ellipse2 } from "./icons/404/ellipse2.svg";
 export { default as ellipse3 } from "./icons/404/ellipse3.svg";
+
+// social icons
+export { default as twitter } from "./icons/social-icons/twitter.svg";
+export { default as discord } from "./icons/social-icons/discord.svg";
+export { default as facebook } from "./icons/social-icons/facebook.svg";
+export { default as github } from "./icons/social-icons/github.svg";
+export { default as linkedin } from "./icons/social-icons/linked-in.svg";
+export { default as telegram } from "./icons/social-icons/slack.svg";
