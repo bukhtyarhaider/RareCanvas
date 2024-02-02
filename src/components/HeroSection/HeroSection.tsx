@@ -9,8 +9,10 @@ import {
 } from "../../assets";
 import CustomButton from "../CustomButton/CustomButton";
 import styles from "./HeroSection.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.heroSectionContainer}>
       <div className={styles.topContentWrapper}>
@@ -29,7 +31,11 @@ const HeroSection = () => {
           </p>
 
           <div className={styles.detailsWrapper}>
-            <CustomButton title="Get Started" icon={rocketLaunch} />
+            <CustomButton
+              title="Get Started"
+              icon={rocketLaunch}
+              onClick={() => navigate("/404")}
+            />
 
             <div className={styles.details}>
               <div className={styles.detail}>
