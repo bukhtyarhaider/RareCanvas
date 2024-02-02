@@ -1,15 +1,12 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import "./main.scss";
 import TopBar from "./components/TopBar/TopBar";
-import HeroSection from "./components/HeroSection/HeroSection";
-import Brands from "./components/Brands/Brands";
-import FancyDrop from "./components/FancyDrop/FancyDrop";
-import CreateNFT from "./components/CreateNFT/CreateNFT";
-import Creators from "./components/Creators/Creators";
-import JoinUs from "./components/JoinUs/JoinUs";
 import Footer from "./components/Footer/Footer";
 import { gradientBlueBG, gradientPurpleBG } from "./assets";
 import LazyLoad from "react-lazy-load";
+import { Route, Routes, useLocation } from "react-router-dom";
+import Router from "./Router";
+import Home from "./pages/Home/Home";
 
 interface ThemeContextProps {
   theme: string;
@@ -20,6 +17,11 @@ export const ThemeContext = createContext<ThemeContextProps | null>(null);
 
 function App() {
   const [theme, setTheme] = useState("dark");
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
@@ -27,14 +29,19 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="app-container" id={theme}>
-        <TopBar />
-        <HeroSection />
-        <Brands />
-        <FancyDrop />
-        <CreateNFT />
-        <Creators />
-        <JoinUs />
-        <Footer />
+        <Routes>
+          <Route
+            path="/*"
+            element={
+              <>
+                <TopBar />
+                <Router />
+                <Footer />
+              </>
+            }
+          />
+          <Route path="*" element={<Home />} />
+        </Routes>
 
         <LazyLoad className="gradientPurpleBG">
           <img src={gradientPurpleBG} alt="gradientPurpleBG" />
