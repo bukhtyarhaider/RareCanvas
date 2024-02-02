@@ -4,8 +4,10 @@ import Chip from "../Chip/Chip";
 import styles from "./FancyDrop.module.scss";
 import NFTCard from "../NFTCard/NFTCard";
 import CustomButton from "../CustomButton/CustomButton";
+import { useNavigate } from "react-router-dom";
 
 const FancyDrop = () => {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>(
     nftCategories[1].id
   );
@@ -45,7 +47,7 @@ const FancyDrop = () => {
       </div>
 
       <div className={styles.buttonWrapp}>
-        <CustomButton title="View More" />
+        <CustomButton title="View More" onClick={() => navigate("/all-nfts")} />
       </div>
     </div>
   );

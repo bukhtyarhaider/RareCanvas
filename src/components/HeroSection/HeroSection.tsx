@@ -49,14 +49,20 @@ const HeroSection = () => {
         </div>
         <div className={styles.imageWrapper}>
           <div className={styles.image}>
-            <img className={styles.image2Icon} alt="" src={header3} />
-            <img
-              className={styles.image3Icon}
-              loading="eager"
-              alt=""
-              src={header2}
-            />
-            <img className={styles.image1Icon} alt="" src={header1} />
+            <LazyLoad>
+              <img className={styles.image2Icon} alt="" src={header3} />
+            </LazyLoad>
+            <LazyLoad>
+              <img
+                className={styles.image3Icon}
+                loading="eager"
+                alt=""
+                src={header2}
+              />
+            </LazyLoad>
+            <LazyLoad>
+              <img className={styles.image1Icon} alt="" src={header1} />
+            </LazyLoad>
           </div>
         </div>
       </div>

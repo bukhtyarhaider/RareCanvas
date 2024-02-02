@@ -69,12 +69,17 @@
     padding-bottom: 40px;
 
     .heading {
+      padding-top: 30px;
       font-size: 38px;
       line-height: 52px;
     }
 
     .searchWrapper {
       width: 100%;
+    }
+
+    .chipContainer {
+      gap: 10px;
     }
 
     .gradientBG {
