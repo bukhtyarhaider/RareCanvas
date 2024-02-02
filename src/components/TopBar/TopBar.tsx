@@ -17,7 +17,7 @@ const TopBar = () => {
         <p>Ranking</p>
       </div>
       <div className={styles.buttonWrapper}>
-        <CustomButton title="Contact Us" />
+        <CustomButton title="Contact Us" onClick={() => navigate("/404")} />
       </div>
     </div>
   );

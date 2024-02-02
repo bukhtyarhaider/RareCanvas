@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   discord,
   facebook,
@@ -33,7 +34,7 @@ const Footer = () => {
             <div className={styles.content}>
               <h2>{data.heading}</h2>
               {data.links.map((link) => (
-                <a href={link.path}>{link.name}</a>
+                <Link to={link.path}>{link.name}</Link>
               ))}
             </div>
           ))}
@@ -42,7 +43,9 @@ const Footer = () => {
 
       <div className={styles.line} />
 
-      <p className={styles.bottomLine}>© 2023 RareCanvas. All rights reserved.</p>
+      <p className={styles.bottomLine}>
+        © 2023 RareCanvas. All rights reserved.
+      </p>
     </>
   );
 };

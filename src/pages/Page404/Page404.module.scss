@@ -1,0 +1,329 @@
+@import "../../mixins";
+
+.page404Container {
+  @include flex(column, center, center);
+  animation: fadeIn 2.5s;
+  @include fadeAnimation;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    background-color: var(--backGroundColor);
+  }
+  .content {
+    @include flex(column, center, center);
+    gap: 20px;
+  }
+
+  .heading {
+    font-family: var(--secondaryFont);
+    font-size: 100px;
+    font-weight: 600;
+    margin-bottom: -10px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .subHeading {
+    font-family: var(--heading404Font);
+    color: var(--primaryText);
+    z-index: 2;
+    font-size: 55px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  p {
+    font-family: var(--secondaryFont);
+    color: var(--primaryText);
+    z-index: 2;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    padding-inline: 16%;
+    line-height: 24px;
+    padding-bottom: 5px;
+  }
+
+  a {
+    color: var(--primaryText);
+  }
+
+  .buttonsContainer {
+    @include flex(row, center, center);
+    gap: 20px;
+    z-index: 300;
+    .figmaButton,
+    .upworkButton {
+      font-family: var(--secondaryFont);
+      text-transform: uppercase;
+      @include flex(row, center, center);
+      height: 60px;
+      width: 280px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 32px;
+      color: var(--primaryText);
+      border-radius: 5.5px;
+
+      span {
+        padding-left: 8px;
+      }
+    }
+
+    .figmaButton {
+      background-color: #000000;
+
+      svg {
+        padding-top: 10px;
+        width: 30px;
+      }
+    }
+
+    .upworkButton {
+      background-color: #15a800;
+
+      svg {
+        padding-top: 10px;
+        width: 30px;
+      }
+    }
+  }
+
+  .goToHome {
+    position: absolute;
+    z-index: 200;
+    top: 40px;
+    left: 150px;
+    @include flex(row, center, center);
+    color: var(--primaryText);
+
+    svg {
+      transform: rotate(90deg);
+      margin-top: 5px;
+      height: 25px;
+    }
+
+    &:hover {
+      color: var(--accentColor);
+      svg {
+        path {
+          fill: var(--accentColor);
+        }
+      }
+    }
+  }
+
+  .elements {
+    .cross1,
+    .cross2,
+    .cross3,
+    .ellipse1,
+    .ellipse2,
+    .ellipse3,
+    .switchBg,
+    .switchBgMobile {
+      position: absolute;
+    }
+
+    .cross1,
+    .cross2,
+    .cross3,
+    .ellipse1,
+    .ellipse2,
+    .ellipse3 {
+      svg {
+        rect,
+        path {
+          fill: var(--color-fuchsia);
+        }
+      }
+    }
+
+    .switchBg {
+      top: 0;
+      left: -170px;
+      bottom: 0;
+      z-index: 1;
+      svg {
+        height: 99.2vh;
+      }
+    }
+
+    .switchBgMobile {
+      display: none;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .cross1 {
+      bottom: 6%;
+      right: 17%;
+
+      svg {
+        width: 70px;
+      }
+    }
+    .cross2 {
+      top: 15%;
+      right: 58%;
+
+      svg {
+        width: 50px;
+      }
+    }
+    .cross3 {
+      top: 37%;
+      left: 27%;
+    }
+
+    .ellipse1 {
+      top: 8%;
+      right: 25%;
+
+      svg {
+        width: 70px;
+      }
+    }
+
+    .ellipse2 {
+      bottom: 6%;
+      left: 17%;
+
+      svg {
+        width: 50px;
+      }
+    }
+
+    .ellipse3 {
+      top: 25%;
+      right: 39%;
+
+      svg {
+        width: 30px;
+      }
+    }
+  }
+
+  .gradientBlueBG,
+  .gradientPurpleBG {
+    position: absolute;
+    z-index: 1;
+    height: 95%;
+    top: 0%;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .gradientBlueBG {
+    left: 0;
+  }
+
+  .gradientPurpleBG {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page404Container {
+    .content {
+      padding-top: 40px;
+    }
+    .heading {
+      font-size: 60px;
+    }
+
+    .subHeading {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 16px;
+      padding-inline: 30px;
+    }
+
+    .buttonsContainer {
+      @include flex(column, center, center);
+      gap: 20px;
+      .figmaButton,
+      .upworkButton {
+        height: 50px;
+        width: 260px;
+        font-size: 16px;
+      }
+    }
+
+    .goToHome {
+      left: 30px;
+    }
+
+    .elements {
+      .switchBg {
+        display: none;
+      }
+      .switchBgMobile {
+        display: block;
+      }
+
+      .cross1 {
+        bottom: 12%;
+
+        svg {
+          width: 50px;
+        }
+      }
+      .cross2 {
+        top: 22%;
+        right: 15%;
+
+        svg {
+          width: 30px;
+        }
+      }
+      .cross3 {
+        top: 60%;
+        left: 11%;
+
+        svg {
+          width: 20px;
+        }
+      }
+
+      .ellipse1 {
+        top: 10%;
+        right: 20%;
+
+        svg {
+          width: 40px;
+        }
+      }
+      .ellipse2 {
+        bottom: 20%;
+        left: 11%;
+
+        svg {
+          width: 20px;
+        }
+      }
+      .ellipse3 {
+        top: 35%;
+        right: 31%;
+
+        svg {
+          width: 15px;
+        }
+      }
+    }
+  }
+}

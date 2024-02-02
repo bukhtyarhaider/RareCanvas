@@ -7,6 +7,7 @@ import LazyLoad from "react-lazy-load";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Router from "./Router";
 import Home from "./pages/Home/Home";
+import Page404 from "./pages/Page404/Page404";
 
 interface ThemeContextProps {
   theme: string;
@@ -40,6 +41,7 @@ function App() {
               </>
             }
           />
+          <Route path="/404" element={<Page404 />} />
           <Route path="*" element={<Home />} />
         </Routes>
 
